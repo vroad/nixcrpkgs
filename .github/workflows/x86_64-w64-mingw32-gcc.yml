@@ -14,5 +14,6 @@ jobs:
       with:
         name: vroad
         authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+    - run: cat /etc/nix/nix.conf
     - run: nix-build -A x86_64-w64-mingw32.gcc
 
